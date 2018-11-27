@@ -1,0 +1,4 @@
+plugins:
+  discourse_meeting_invite_enabled:
+    default: true
+    client: true

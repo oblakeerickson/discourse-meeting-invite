@@ -1,0 +1,3 @@
+en:
+  site_settings:
+    discourse_meeting_invite_enabled: "Enable DiscourseMeetingInvite plugin"
