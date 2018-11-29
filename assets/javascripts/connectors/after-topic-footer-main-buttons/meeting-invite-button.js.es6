@@ -1,7 +1,14 @@
+import { ajax } from "discourse/lib/ajax";
+
 export default {
   actions: {
     clickButton() {
-      window.open("https://discourse.org", '_blank');
+      return ajax(`/discourse-meeting-invite/oauth2callback`, {
+        type: "GET"
+      })
+        .then(result => {
+          console.log(result);
+        })
     }
   }
 };

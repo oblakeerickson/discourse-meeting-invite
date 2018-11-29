@@ -4,6 +4,11 @@
 # authors: Blake Erickson
 # url: https://github.com/oblakeerickson
 
+gem 'google-api-client', '0.25.0', { require: false }
+
+require 'google/apis/calendar_v3'
+require 'google/api_client/client_secrets'
+
 register_asset "stylesheets/common/discourse-meeting-invite.scss"
 
 enabled_site_setting :discourse_meeting_invite_enabled
@@ -32,8 +37,11 @@ after_initialize do
     end
   end
 
+  require File.expand_path("../app/controllers/discourse_meeting_invite/meeting_invites_controller.rb", __FILE__)
+
   DiscourseMeetingInvite::Engine.routes.draw do
     get "/list" => "actions#list"
+    get "/oauth2callback" => "meeting_invites#oauth2callback"
   end
 
   Discourse::Application.routes.append do
