@@ -4,6 +4,19 @@
 # authors: Blake Erickson
 # url: https://github.com/oblakeerickson
 
+gem 'declarative-option', '0.1.0', { require: false }
+gem 'declarative', '0.0.10', { require: false }
+gem 'uber', '0.1.0', { require: false }
+gem 'representable', '3.0.4', { require: false }
+gem 'retriable', '3.1.2', { require: false }
+gem 'mime-types-data', '3.2018.0812', { require: false }
+gem 'mime-types', '3.2.2', { require: false }
+gem 'signet', '0.11.0', { require: false }
+gem 'os', '1.0.0', { require: false }
+gem 'memoist', '0.16.0', { require: false }
+gem 'googleauth', '0.6.7', { require: false }
+gem 'httpclient', '2.8.3', { require: false }
+
 gem 'google-api-client', '0.25.0', { require: false }
 
 require 'google/apis/calendar_v3'
